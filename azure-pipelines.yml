@@ -10,9 +10,9 @@ pool:
   name: Default 
   vmImage: ubuntu-latest
 
-task: Print text
-
 steps:
+- task: Print text
+
 - script: echo "Hello world"
   displayName: Print Hello World
 
