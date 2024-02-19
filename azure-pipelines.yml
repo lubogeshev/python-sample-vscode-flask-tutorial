@@ -5,7 +5,8 @@
 
 jobs:
 - job: print_text
-  displayname: Print text job
+  displayName: Print text job
+  
   trigger:
   - main
 
