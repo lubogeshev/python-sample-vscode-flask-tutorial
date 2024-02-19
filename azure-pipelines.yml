@@ -11,9 +11,6 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: Print@0
-  displayName: Print text
-
 - script: echo "Hello world"
   displayName: Print Hello World
 
