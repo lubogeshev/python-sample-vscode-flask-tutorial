@@ -3,17 +3,20 @@
 # Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
 
-trigger:
-- main
+jobs:
+- job: print_text
+  displayname: Print text job
+  trigger:
+  - main
 
-pool:
-  name: Default 
-  vmImage: ubuntu-latest
+  pool:
+    name: Default 
+    vmImage: ubuntu-latest
 
-steps:
-- script: echo "Hello world"
-  displayName: Print Hello World
+  steps:
+  - script: echo "Hello world"
+    displayName: Print Hello World
 
-- script: |
-    echo "##vso[task.complete result=Succeeded]" # Mark the task as succeeded
-  condition: always()
+  - script: |
+      echo "##vso[task.complete result=Succeeded]" # Mark the task as succeeded
+    condition: always()
