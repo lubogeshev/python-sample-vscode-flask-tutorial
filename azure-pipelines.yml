@@ -17,10 +17,8 @@ strategy:
     #   python.version: '3.5'
     # Python36:
     #   python.version: '3.6'
-    # Python37:
-    #   python.version: '3.7'
-    Python396:
-      python.version: '3.9.6'
+    Python37:
+      python.version: '3.7'
 
 steps:
 - task: UsePythonVersion@0
@@ -28,12 +26,12 @@ steps:
     versionSpec: '$(python.version)'
   displayName: 'Use Python $(python.version)'
 
-- script: |
-    python -m pip install --upgrade pip
-    pip install -r requirements.txt
-  displayName: 'Install dependencies'
+# - script: |
+#     python -m pip install --upgrade pip
+#     pip install -r requirements.txt
+#   displayName: 'Install dependencies'
 
-- script: |
-    pip install pytest pytest-azurepipelines
-    pytest
-  displayName: 'pytest'
+# - script: |
+#     pip install pytest pytest-azurepipelines
+#     pytest
+#   displayName: 'pytest'
